@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100;
+  min-height: 100vh;
+}
+
+button {
+  @apply transition ease-in-out duration-200;
+}
+
+.toast-enter {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.toast-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 200ms ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 240ms ease-out;
+}
